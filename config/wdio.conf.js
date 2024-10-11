@@ -1,3 +1,4 @@
+const tag = process.env.TAG || 'regression';
 const path = require('path');
 exports.config = {
     //
@@ -10,8 +11,8 @@ exports.config = {
  
     specs: [
         // ToDo: define location for spec files here
-        path.join(__dirname, '../tests/regression/ios/specs/*.js')
-        //'./tests/regression/ios/specs/*.js'
+        //path.join(__dirname, '../tests/regression/ios/specs/*.js')
+        path.join(__dirname, `../tests/${tag}/ios/specs/*.js`)   
     ],
     // Patterns to exclude.
     exclude: [
