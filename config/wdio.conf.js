@@ -60,6 +60,7 @@ exports.config = {
         "appium:deviceName": "iPhone 11",
         "appium:automationName": "xcuitest",
         "appium:app": path.join(__dirname, '../app/ios/UIKitCatalog.app'),
+        'appium:useNewWDA': true,
         maxInstances: 2
     }],
 
