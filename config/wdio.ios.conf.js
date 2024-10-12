@@ -123,10 +123,5 @@ exports.config = {
     after: function () {
         console.log('All tests completed, running cleanup...');
     },
-    // line has been added to create the confilict
-    //--------------------
-    afterEach: function () {
-        console.log('All tests completed, running cleanup...');
-    }
-    //-----------------------
+    
 };
