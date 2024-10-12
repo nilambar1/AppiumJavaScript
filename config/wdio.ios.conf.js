@@ -22,16 +22,7 @@ exports.config = {
 
     // Define capabilities for Android and iOS
     capabilities: [
-        // Android Device 1
-        {
-            "appium:platformName": 'Android',
-            "appium:deviceName": 'Pixel 4 API 35',
-            "appium:automationName": 'UiAutomator2',
-            "appium:app": '/Users/nilambar/wdio-appium/app/android/ApiDemos-debug.apk',
-            "appium:specs": ['/Users/nilambar/UKBIAPPIUM/tests/regression/android/specs/*.js'],
-            maxInstances: 0,
-            //tags: ['sanity', 'regression'], // Tags for test filtering
-        },
+
         // iOS Device 1
         {
             "appium:platformName": 'iOS',
