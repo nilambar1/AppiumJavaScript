@@ -122,5 +122,11 @@ exports.config = {
     // Clean up or additional teardown after tests
     after: function () {
         console.log('All tests completed, running cleanup...');
+    },
+    // line has been added to create the confilict
+    //--------------------
+    afterEach: function () {
+        console.log('All tests completed, running cleanup...');
     }
+    //-----------------------
 };
