@@ -47,7 +47,7 @@ exports.config = {
     services: ['appium'],
 
     // Reporters configuration
-    /*reporters: 
+    reporters: [
         ['spec'], // Console output
         ['junit', {
             outputDir: './reports/junit/',
@@ -59,8 +59,8 @@ exports.config = {
             outputDir: './reports/allure-results',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: false, // Enables screenshots in Allure
-        }]*/
-    
+        }]
+    ],
 
     // Hooks
     beforeSuite: function (suite) {
