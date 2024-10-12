@@ -12,10 +12,11 @@
 
     }
 }
-validateHomePageFields();
 
 
-
-function funB(){
-    console.log("this is sencond function created by main branch")
+function funC(){
+    console.log("Created by newBranch")
+}
+function funcD(){
+    console.log("created again by newBrach")
 }
