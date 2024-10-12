@@ -14,9 +14,13 @@
 }
 
 
+const abc = validateHomePageFields();
+
+
 function funC(){
     console.log("Created by newBranch")
 }
 function funcD(){
     console.log("created again by newBrach")
 }
+
