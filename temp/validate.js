@@ -24,3 +24,7 @@ function funcD(){
     console.log("created again by newBrach")
 }
 
+function fundG(){
+    console.log('New created in brnach main')
+}
+
