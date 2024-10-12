@@ -12,7 +12,7 @@
 
     }
 }
-validateHomePageFields();
+
 
 function funC(){
     console.log("Created by newBranch")
