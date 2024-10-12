@@ -13,3 +13,11 @@
     }
 }
 validateHomePageFields();
+
+function funA(){
+    console.log("This is first function created by main branch");
+}
+
+function funB(){
+    console.log("this is sencond function created by main branch")
+}
