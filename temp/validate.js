@@ -14,7 +14,7 @@
 }
 
 
-const abc = validateHomePageFields();
+
 
 
 function funC(){
@@ -22,5 +22,12 @@ function funC(){
 }
 function funcD(){
     console.log("created again by newBrach")
+}
+
+function funE(){
+    console.log("New function created after checkout")
+}
+function funF(){
+    console.log('created  new function')
 }
 
