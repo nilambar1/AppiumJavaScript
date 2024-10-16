@@ -97,4 +97,35 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000    },
+        onComplete: function() {
+            const reportError = new Error('Could not generate Allure report')
+            const generation = allure(['generate', 'allure-results', '--clean'])
+            return new Promise((resolve, reject) => {
+                const generationTimeout = setTimeout(
+                    () => reject(reportError),
+                    5000)
+    
+                generation.on('exit', function(exitCode) {
+                    clearTimeout(generationTimeout)
+    
+                    if (exitCode !== 0) {
+                        return reject(reportError)
+                    }
+    
+                    console.log('Allure report successfully generated')
+                    resolve()
+                })
+            })
+        },
+        beforeSuite: async (suite) => {
+            console.log(`Starting suite: ${suite.title}`);
+            console.log('Pausing for 5 seconds before the suite starts...');
+            await browser.pause(4000); // Pause for 5 seconds
+            console.log("paused");
+        },
+        afterTest: function (test, context, { error, result, duration, passed, retries }) {
+            if (!passed) {
+                browser.takeScreenshot();
+            }
+        },
 }
